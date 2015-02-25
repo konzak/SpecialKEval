@@ -40,4 +40,8 @@ private:
  short mFlushCheck[MAX_FLUSH_CHECK_SUM+1];
 };
 
+extern "C" {
+  SevenEval* SevenEval_new(){ return new SevenEval(); }
+  short SevenEval_GetRank(SevenEval* foo, const int CARD1, const int CARD2, const int CARD3, const int CARD4, const int CARD5, const int CARD6, const int CARD7){ return foo->GetRank(CARD1, CARD2, CARD3, CARD4, CARD5, CARD6, CARD7);}
+}
 #endif
